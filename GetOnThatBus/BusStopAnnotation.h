@@ -1,16 +1,15 @@
 //
-//  ViewController.h
+//  BusStopAnnotation.h
 //  GetOnThatBus
 //
 //  Created by Andrew  Nguyen on 7/28/15.
 //  Copyright (c) 2015 Andrew Nguyen. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "BusStop.h"
 
-@interface ViewController : UIViewController <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>
-
+@interface BusStopAnnotation : MKPointAnnotation
+@property BusStop *busStop;
 
 @end
-

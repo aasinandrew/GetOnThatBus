@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DetailViewController.h
 //  GetOnThatBus
 //
 //  Created by Andrew  Nguyen on 7/28/15.
@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
+#import "BusStop.h"
 
-@interface ViewController : UIViewController <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface DetailViewController : UIViewController
+@property BusStop *busStop;
 
 
 @end
-

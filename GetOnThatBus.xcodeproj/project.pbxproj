@@ -14,6 +14,10 @@
 		BB758F251B68244100FD9A68 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB758F241B68244100FD9A68 /* Images.xcassets */; };
 		BB758F281B68244100FD9A68 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB758F261B68244100FD9A68 /* LaunchScreen.xib */; };
 		BB758F341B68244100FD9A68 /* GetOnThatBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB758F331B68244100FD9A68 /* GetOnThatBusTests.m */; };
+		BB758F3E1B68251500FD9A68 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB758F3D1B68251500FD9A68 /* MapKit.framework */; };
+		BB758F411B682E5100FD9A68 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB758F401B682E5100FD9A68 /* DetailViewController.m */; };
+		BB758F441B68384000FD9A68 /* BusStop.m in Sources */ = {isa = PBXBuildFile; fileRef = BB758F431B68384000FD9A68 /* BusStop.m */; };
+		BB758F4D1B683B5900FD9A68 /* BusStopAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB758F4C1B683B5900FD9A68 /* BusStopAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,13 @@
 		BB758F2D1B68244100FD9A68 /* GetOnThatBusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetOnThatBusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB758F321B68244100FD9A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB758F331B68244100FD9A68 /* GetOnThatBusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetOnThatBusTests.m; sourceTree = "<group>"; };
+		BB758F3D1B68251500FD9A68 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BB758F3F1B682E5100FD9A68 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BB758F401B682E5100FD9A68 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		BB758F421B68384000FD9A68 /* BusStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusStop.h; sourceTree = "<group>"; };
+		BB758F431B68384000FD9A68 /* BusStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusStop.m; sourceTree = "<group>"; };
+		BB758F4B1B683B5900FD9A68 /* BusStopAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusStopAnnotation.h; sourceTree = "<group>"; };
+		BB758F4C1B683B5900FD9A68 /* BusStopAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusStopAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB758F3E1B68251500FD9A68 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +75,7 @@
 		BB758F0B1B68244100FD9A68 = {
 			isa = PBXGroup;
 			children = (
+				BB758F3D1B68251500FD9A68 /* MapKit.framework */,
 				BB758F161B68244100FD9A68 /* GetOnThatBus */,
 				BB758F301B68244100FD9A68 /* GetOnThatBusTests */,
 				BB758F151B68244100FD9A68 /* Products */,
@@ -85,6 +98,12 @@
 				BB758F1C1B68244100FD9A68 /* AppDelegate.m */,
 				BB758F1E1B68244100FD9A68 /* ViewController.h */,
 				BB758F1F1B68244100FD9A68 /* ViewController.m */,
+				BB758F421B68384000FD9A68 /* BusStop.h */,
+				BB758F431B68384000FD9A68 /* BusStop.m */,
+				BB758F4B1B683B5900FD9A68 /* BusStopAnnotation.h */,
+				BB758F4C1B683B5900FD9A68 /* BusStopAnnotation.m */,
+				BB758F3F1B682E5100FD9A68 /* DetailViewController.h */,
+				BB758F401B682E5100FD9A68 /* DetailViewController.m */,
 				BB758F211B68244100FD9A68 /* Main.storyboard */,
 				BB758F241B68244100FD9A68 /* Images.xcassets */,
 				BB758F261B68244100FD9A68 /* LaunchScreen.xib */,
@@ -220,8 +239,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB758F201B68244100FD9A68 /* ViewController.m in Sources */,
+				BB758F4D1B683B5900FD9A68 /* BusStopAnnotation.m in Sources */,
 				BB758F1D1B68244100FD9A68 /* AppDelegate.m in Sources */,
+				BB758F441B68384000FD9A68 /* BusStop.m in Sources */,
 				BB758F1A1B68244100FD9A68 /* main.m in Sources */,
+				BB758F411B682E5100FD9A68 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +304,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -325,7 +347,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
