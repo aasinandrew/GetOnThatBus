@@ -6,22 +6,22 @@
 //  Copyright (c) 2015 Andrew Nguyen. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MapViewController.h"
 #import "DetailViewController.h"
 #import "BusStop.h"
 #import "BusStopAnnotation.h"
 
-@interface ViewController ()
+@interface MapViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property NSArray *busStopsDictionaries;
-@property NSMutableArray *busStops;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property NSArray *busStopsDictionaries;
+@property NSMutableArray *busStops;
 @end
 
-@implementation ViewController
+@implementation MapViewController
 
+#pragma mark - viewcontroller life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self getBusStops];
@@ -30,6 +30,7 @@
 
 }
 
+#pragma mark - bus stop methods
 -(void) getBusStops {
     NSURL *url = [NSURL URLWithString:@"https://s3.amazonaws.com/mmios8week/bus.json"];
     [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -37,7 +38,6 @@
         self.busStopsDictionaries = responseDictionary[@"row"];
 
         [self loadBusStops];
-         //[self.tableView reloadData];
 
     }] resume];
 
@@ -66,11 +66,13 @@
     double latitude = [self.busStopsDictionaries[0][@"latitude"] doubleValue];
     double longitude = [self.busStopsDictionaries[0][@"longitude"] doubleValue];
 
-    //CLLocationCoordinate2D chicago = CLLocationCoordinate2DMake(41.868513, -87.55);
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(latitude, longitude);
     [self.mapView setRegion:MKCoordinateRegionMake(center,MKCoordinateSpanMake(0.4, 0.4)) animated:YES];
+
+    //[self.mapView showAnnotations:[self.mapView annotations] animated:YES];
 }
 
+#pragma mark - mapview delegate
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
     if ([annotation isKindOfClass:[BusStopAnnotation class]]) {
         MKAnnotationView *pin = [MKAnnotationView new];
@@ -98,6 +100,7 @@
 
 }
 
+#pragma mark - segue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
     if ([segue.identifier isEqualToString:@"ShowDetail"]) {
@@ -112,6 +115,7 @@
     }
 }
 
+#pragma mark - segment control
 - (IBAction)onSegmentToggled:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 0) {
         self.tableView.hidden = YES;
@@ -125,6 +129,7 @@
     }
 }
 
+#pragma mark - tableview datasource
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     BusStop *busStop = [self.busStops objectAtIndex:indexPath.row];
@@ -136,9 +141,5 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.busStops.count;
 }
-
-//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    [self performSegueWithIdentifier:@"FromCell" sender:self];
-//}
 
 @end

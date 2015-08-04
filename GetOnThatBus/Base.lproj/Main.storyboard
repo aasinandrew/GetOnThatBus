@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Bus Stops-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -18,16 +18,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="66f-gN-Hi0">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="563"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="J9C-pP-c6g"/>
                                 </connections>
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wfw-O5-0FM">
-                                <rect key="frame" x="217" y="564" width="166" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="166" id="9ub-kA-kgS"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="564" width="568" height="29"/>
                                 <segments>
                                     <segment title="Map"/>
                                     <segment title="List"/>
@@ -48,13 +45,13 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aXk-Z8-z7r">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MVx-rS-RHo">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -72,19 +69,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TPp-xX-Lsg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="3r8-vJ-wWe"/>
-                            <constraint firstItem="TPp-xX-Lsg" firstAttribute="centerX" secondItem="wfw-O5-0FM" secondAttribute="centerX" id="BnY-1D-BI1"/>
-                            <constraint firstItem="wfw-O5-0FM" firstAttribute="top" secondItem="TPp-xX-Lsg" secondAttribute="bottom" constant="1" id="ECC-Vm-jo9"/>
-                            <constraint firstItem="66f-gN-Hi0" firstAttribute="bottom" secondItem="TPp-xX-Lsg" secondAttribute="bottom" id="LxB-Ry-bfq"/>
-                            <constraint firstItem="66f-gN-Hi0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="QOx-RB-Zon"/>
-                            <constraint firstItem="TPp-xX-Lsg" firstAttribute="trailing" secondItem="66f-gN-Hi0" secondAttribute="trailing" id="lRu-ja-56X"/>
-                            <constraint firstItem="TPp-xX-Lsg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ml9-bW-PqT"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="wfw-O5-0FM" secondAttribute="bottom" constant="8" symbolic="YES" id="nZa-Pa-OCO"/>
-                            <constraint firstAttribute="trailing" secondItem="66f-gN-Hi0" secondAttribute="trailing" id="xN8-Ao-RtE"/>
-                            <constraint firstItem="66f-gN-Hi0" firstAttribute="leading" secondItem="TPp-xX-Lsg" secondAttribute="leading" id="zO9-qt-3t9"/>
+                            <constraint firstItem="66f-gN-Hi0" firstAttribute="centerX" secondItem="wfw-O5-0FM" secondAttribute="centerX" id="55X-d7-nId"/>
+                            <constraint firstItem="wfw-O5-0FM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="5lG-cj-paQ"/>
+                            <constraint firstItem="66f-gN-Hi0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="9Kr-XD-5OL"/>
+                            <constraint firstItem="66f-gN-Hi0" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="KgW-4g-Hht"/>
+                            <constraint firstAttribute="trailing" secondItem="66f-gN-Hi0" secondAttribute="trailing" id="YX9-CF-0I4"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="wfw-O5-0FM" secondAttribute="bottom" constant="8" symbolic="YES" id="Ypp-aO-VOi"/>
+                            <constraint firstItem="wfw-O5-0FM" firstAttribute="top" secondItem="TPp-xX-Lsg" secondAttribute="bottom" constant="1" id="dwO-en-nW4"/>
+                            <constraint firstItem="66f-gN-Hi0" firstAttribute="leading" secondItem="TPp-xX-Lsg" secondAttribute="leading" id="n18-Wp-0RB"/>
+                            <constraint firstItem="66f-gN-Hi0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="q83-73-5CC"/>
+                            <constraint firstItem="TPp-xX-Lsg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="sXy-PV-U4u"/>
+                            <constraint firstItem="66f-gN-Hi0" firstAttribute="trailing" secondItem="TPp-xX-Lsg" secondAttribute="trailing" id="tjW-lJ-hJr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="quA-MQ-rQi"/>
+                    <navigationItem key="navigationItem" title="Bus Stops" id="quA-MQ-rQi"/>
                     <connections>
                         <outlet property="mapView" destination="66f-gN-Hi0" id="ag7-of-1gG"/>
                         <outlet property="segmentedControl" destination="wfw-O5-0FM" id="pjh-Kj-UmG"/>
@@ -111,13 +109,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Routes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSN-PL-Tta">
                                 <rect key="frame" x="16" y="172" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJc-ac-4qC">
                                 <rect key="frame" x="16" y="226" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mxO-1D-sbt">
@@ -158,6 +156,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9dJ-KT-x8F">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.22044978832836226" green="0.37352806717174775" blue="0.65656565659999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

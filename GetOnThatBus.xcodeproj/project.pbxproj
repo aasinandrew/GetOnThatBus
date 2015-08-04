@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BB758F1A1B68244100FD9A68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB758F191B68244100FD9A68 /* main.m */; };
 		BB758F1D1B68244100FD9A68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB758F1C1B68244100FD9A68 /* AppDelegate.m */; };
-		BB758F201B68244100FD9A68 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB758F1F1B68244100FD9A68 /* ViewController.m */; };
+		BB758F201B68244100FD9A68 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB758F1F1B68244100FD9A68 /* MapViewController.m */; };
 		BB758F231B68244100FD9A68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB758F211B68244100FD9A68 /* Main.storyboard */; };
 		BB758F251B68244100FD9A68 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB758F241B68244100FD9A68 /* Images.xcassets */; };
 		BB758F281B68244100FD9A68 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB758F261B68244100FD9A68 /* LaunchScreen.xib */; };
@@ -36,8 +36,8 @@
 		BB758F191B68244100FD9A68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BB758F1B1B68244100FD9A68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BB758F1C1B68244100FD9A68 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BB758F1E1B68244100FD9A68 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BB758F1F1B68244100FD9A68 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BB758F1E1B68244100FD9A68 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		BB758F1F1B68244100FD9A68 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		BB758F221B68244100FD9A68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB758F241B68244100FD9A68 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BB758F271B68244100FD9A68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -96,8 +96,8 @@
 			children = (
 				BB758F1B1B68244100FD9A68 /* AppDelegate.h */,
 				BB758F1C1B68244100FD9A68 /* AppDelegate.m */,
-				BB758F1E1B68244100FD9A68 /* ViewController.h */,
-				BB758F1F1B68244100FD9A68 /* ViewController.m */,
+				BB758F1E1B68244100FD9A68 /* MapViewController.h */,
+				BB758F1F1B68244100FD9A68 /* MapViewController.m */,
 				BB758F421B68384000FD9A68 /* BusStop.h */,
 				BB758F431B68384000FD9A68 /* BusStop.m */,
 				BB758F4B1B683B5900FD9A68 /* BusStopAnnotation.h */,
@@ -238,7 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB758F201B68244100FD9A68 /* ViewController.m in Sources */,
+				BB758F201B68244100FD9A68 /* MapViewController.m in Sources */,
 				BB758F4D1B683B5900FD9A68 /* BusStopAnnotation.m in Sources */,
 				BB758F1D1B68244100FD9A68 /* AppDelegate.m in Sources */,
 				BB758F441B68384000FD9A68 /* BusStop.m in Sources */,
@@ -438,6 +438,7 @@
 				BB758F391B68244100FD9A68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB758F3A1B68244100FD9A68 /* Build configuration list for PBXNativeTarget "GetOnThatBusTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +447,7 @@
 				BB758F3C1B68244100FD9A68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
